@@ -1,0 +1,48 @@
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\bin\Debug\BallisticTrajectory.exe.config
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\bin\Debug\BallisticTrajectory.exe
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\bin\Debug\BallisticTrajectory.pdb
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.Form1.resources
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.Properties.Resources.resources
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.csproj.GenerateResource.Cache
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.csproj.CoreCompileInputs.cache
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.exe
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.pdb
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\bin\Debug\Ballistics.mdf
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\bin\Debug\Ballistics_log.ldf
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\bin\Debug\Ballistics.mdf
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\bin\Debug\Ballistics_log.ldf
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\bin\Debug\BallisticTrajectory.exe.config
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\bin\Debug\BallisticTrajectory.exe
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\bin\Debug\BallisticTrajectory.pdb
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.csprojResolveAssemblyReference.cache
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.Form1.resources
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.Properties.Resources.resources
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.csproj.GenerateResource.Cache
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.csproj.CoreCompileInputs.cache
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.exe
+E:\Petar\Petnica - kosi hitac\safe\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.pdb
+E:\Petar\Petnica - kosi hitac\BallisticTrajectory\BallisticTrajectory\obj\Debug\BallisticTrajectory.csprojResolveAssemblyReference.cache
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\bin\Debug\Ballistics.mdf
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\bin\Debug\Ballistics_log.ldf
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\bin\Debug\BallisticTrajectory.exe.config
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\bin\Debug\BallisticTrajectory.exe
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\bin\Debug\BallisticTrajectory.pdb
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\obj\Debug\BallisticTrajectory.csprojAssemblyReference.cache
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\obj\Debug\BallisticTrajectory.Form1.resources
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\obj\Debug\BallisticTrajectory.Properties.Resources.resources
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\obj\Debug\BallisticTrajectory.csproj.GenerateResource.cache
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\obj\Debug\BallisticTrajectory.csproj.CoreCompileInputs.cache
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\obj\Debug\BallisticTrajectory.exe
+C:\Users\WIN10\Desktop\Petnica v. 1.0\BallisticTrajectory\obj\Debug\BallisticTrajectory.pdb
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\bin\Debug\Ballistics.mdf
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\bin\Debug\Ballistics_log.ldf
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\bin\Debug\BallisticTrajectory.exe.config
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\bin\Debug\BallisticTrajectory.exe
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\bin\Debug\BallisticTrajectory.pdb
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\obj\Debug\BallisticTrajectory.Form1.resources
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\obj\Debug\BallisticTrajectory.Properties.Resources.resources
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\obj\Debug\BallisticTrajectory.csproj.GenerateResource.cache
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\obj\Debug\BallisticTrajectory.csproj.CoreCompileInputs.cache
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\obj\Debug\BallisticTrajectory.exe
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\obj\Debug\BallisticTrajectory.pdb
+C:\Users\WIN10\Desktop\Petnica v. 1.2\BallisticTrajectory\obj\Debug\BallisticTrajectory.csprojAssemblyReference.cache
