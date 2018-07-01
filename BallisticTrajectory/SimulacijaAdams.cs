@@ -17,7 +17,7 @@ namespace BallisticTrajectory
     {
 
         /* Simulacija sa otporom vazduha - prediktor-korektor */
-        public void simulationAdams()
+        public void simulationAdams() 
         {
             /* FUNKCIONALNE PROMENLJIVE */
 
@@ -27,7 +27,7 @@ namespace BallisticTrajectory
 
             /* Stil za oznacavanje zapisa */
             DataGridViewCellStyle boja = new DataGridViewCellStyle();
-            boja.ForeColor = Color.Purple;
+            boja.ForeColor = Color.DarkCyan;
             boja.Font = new Font(Tabela.Font, FontStyle.Bold);
 
 
@@ -43,15 +43,15 @@ namespace BallisticTrajectory
             double[] angleAPC = new double[3];
 
             //promenljive za poziciju, brzinu i ubrzanje - nizovi zbog koraka adamsovog metod
-            double[] posStep = new double[3];
-            double[] posYStep = new double[3];
-            double[] VxStep = new double[3];
-            double[] VyStep = new double[3];
-            double[] axStep = new double[3];
-            double[] ayStep = new double[3];
-            double[] currAngleStep = new double[3];
-            double[] angleSpeedStep = new double[3];
-            double[] angleAStep = new double[3];
+            double[] posXStep = new double[5];
+            double[] posYStep = new double[5];
+            double[] VxStep = new double[5];
+            double[] VyStep = new double[5];
+            double[] axStep = new double[5];
+            double[] ayStep = new double[5];
+            double[] currAngleStep = new double[5];
+            double[] angleSpeedStep = new double[5];
+            double[] angleAStep = new double[5];
 
 
             PointD[] points =
@@ -65,7 +65,8 @@ namespace BallisticTrajectory
              };
             try
             {
-                for(int i = 0; i < 4; i++)
+                /* FOR petlja za popunjavanje cetiri koraka metode*/
+                for(int i = 0; i < 5; i++)
                 {
 
                     /* Upis podataka u datagridview */
@@ -82,8 +83,8 @@ namespace BallisticTrajectory
                     Tabela.Rows[Tabela.Rows.Count - 2].DefaultCellStyle = boja;
                     /* Upis u grafik */
 
-                    Grafik.Series[1].Points.AddXY(posX, posY);  // crtanje pozicije na grafiku
-                    Grafik1.Series[1].Points.AddXY(posX, V);  // crtanje pozicije na grafiku
+                    Grafik.Series[4].Points.AddXY(posX, posY);  // crtanje pozicije na grafiku
+                    Grafik1.Series[4].Points.AddXY(posX, V);  // crtanje pozicije na grafiku
 
 
                     /* PREDIKTOR start */
@@ -176,7 +177,25 @@ namespace BallisticTrajectory
                     currAngle = currAnglePC[2];
                     V = Math.Sqrt(Math.Pow(Vx, 2) + Math.Pow(Vy, 2));
 
+
+
                     /*KOREKTOR end */
+
+
+                    /* Promenljive za 4 koraka adams metode start */
+
+                    axStep[i] = ax;
+                    ayStep[i] = ay;
+                    VxStep[i] = Vx;
+                    VyStep[i] = Vy;
+                    posXStep[i] = posX;
+                    posYStep[i] = posY;
+                    angleAStep[i] = angleA;
+                    angleSpeedStep[i] = angleSpeed;
+                    currAngleStep[i] = currAngle;
+
+
+                    /* Promenljive za 4 koraka adams metode end */
 
 
                     /* USLOV ZA PREKIDANJE SIMULACIJE */
@@ -186,6 +205,83 @@ namespace BallisticTrajectory
                         //MessageBox.Show("Vreme leta:" + t + "s");
                     }
                 }
+
+                while(simulationRunning)
+                {
+
+                    /* Upis podataka u datagridview */
+                    string[] row = new string[]
+                    {
+                        posX.ToString(), posY.ToString(),
+                        V.ToString(), Vx.ToString(),
+                        Vy.ToString(), ax.ToString(),
+                        ay.ToString(), Fd.ToString(),
+                        Cd.ToString(), (currAngle * 180 / Math.PI).ToString()
+                    };
+
+                    Tabela.Rows.Add(row);
+                    Tabela.Rows[Tabela.Rows.Count - 2].DefaultCellStyle = boja;
+                    /* Upis u grafik */
+
+                    Grafik.Series[4].Points.AddXY(posX, posY);  // crtanje pozicije na grafiku
+                    Grafik1.Series[4].Points.AddXY(posX, V);  // crtanje pozicije na grafiku
+
+
+                    /* PREDIKTOR start */
+
+                    /* Ugao vektora brzine i apscise */
+                    angleA = g / V * Math.Cos(currAngle);
+                    angleSpeed = angleSpeed + angleA * interval;
+                    currAngle = Math.Atan(Vy / Vx) - angleSpeed * interval;
+
+
+                    /* Racunanje vremena leta */
+                    t += interval;
+
+                    /* pomeranje projektila */
+
+                    // pomeranje po X osi
+                    posX = posX +  interval/24 * (55 * VxStep[3] - 59 * VxStep[2] + 37 * VxStep[1] - 9 * VxStep[0]);
+                    // pomeranje po Y osi
+                    posY = posY +  interval/24 * (55 * VyStep[3] - 59 * VyStep[2] + 37 * VyStep[1] - 9 * VyStep[0]); ;
+
+                    /* Trenutna brzina */
+                    V = Math.Sqrt(Math.Pow(Vx, 2) + Math.Pow(Vy, 2));          //racunanje efektivne vrednosti vektora brzine
+
+                    /* otpor vazduha*/
+                    Cd = LinearFunctionD.LinearInterpolationY(V, points);
+                    Fd = Cd * airDensity * S * Math.Pow(Vx, 2) * 0.5;          //racunanje sile otpora vazduha
+
+
+                    /* Racunanje ubraznja */
+                    ax = Fd * Math.Cos(currAngle) / m;
+                    ay = g + Fd * Math.Sin(currAngle) / m;
+
+                    /* promena brzine u intervalu vremena */
+                    Vx = Vx -  interval/24 * (55 * axStep[3] - 59 * axStep[2] + 37 * axStep[1] - 9 * axStep[0]);
+                    Vy = Vy -  interval/24 * (55 * ayStep[3] - 59 * ayStep[2] + 37 * ayStep[1] - 9 * ayStep[0]); ;
+
+
+                    for (int i = 0; i < 3 ; i++)
+                    {
+                        VxStep[i] = VxStep[i + 1];
+                        VyStep[i] = VyStep[i + 1];
+                        axStep[i] = axStep[i + 1];
+                        ayStep[i] = ayStep[i + 1];
+                    }
+                    VxStep[3] = Vx;
+                    VyStep[3] = Vy;
+                    axStep[3] = ax;
+                    ayStep[3] = ay;
+
+                    /* USLOV ZA PREKIDANJE SIMULACIJE */
+                    if (posY < -1)
+                    {
+                        simulationRunning = false;
+                        //MessageBox.Show("Vreme leta:" + t + "s");
+                    }
+                }
+
 
 
             }
